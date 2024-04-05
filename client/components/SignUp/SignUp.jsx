@@ -1,10 +1,12 @@
+// SignUp.js
 import React, { useState } from 'react';
-import { SignUpValidator } from 'components/ValidationSchema';
 import axios from 'axios';
 import { useRouter } from 'next/router';
+import { SignUpValidator } from 'components/ValidationSchema';
 import { inputFieldSignup } from 'components/constants/InputFields';
-import './SignUp.scss';
 import InputControl from 'components/InputControl/InputControl';
+import './SignUp.scss';
+import USE_LOCAL_STORAGE from 'components/constants/USE_LOCAL_STORAGE';
 
 const SignUp = () => {
   const router = useRouter();
@@ -15,7 +17,9 @@ const SignUp = () => {
     password: '',
     confirmPassword: '',
   });
+
   const [errors, setErrors] = useState({});
+  const [_, setStoredToken] = USE_LOCAL_STORAGE('token'); // Using custom hook to set token
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,7 +38,13 @@ const SignUp = () => {
       try {
         const { confirmPassword, ...dataTOSend } = signupFormData;
 
-        await axios.post('http://localhost:5000/v3/user/register', dataTOSend);
+        const response = await axios.post(
+          'http://localhost:5000/v3/user/register',
+          dataTOSend
+        );
+
+        const { token } = response.data;
+        setStoredToken(token);
 
         router.push('/');
       } catch (error) {

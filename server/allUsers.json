@@ -13,5 +13,21 @@
     "password": "$2a$10$4E3BeHr/mG6QhQ704JjM1.gv1ihIElMJscJKa.1xrOorarM/0VoJe",
     "id": "1712294456053",
     "avatar": "https://i.pravatar.cc/300"
+  },
+  {
+    "fullname": "Sagar",
+    "age": "56",
+    "email": "sagar@gmail.com",
+    "password": "$2a$10$zKOumj.c5aV9Mr4KOf5OF.ebRzCi.Gu0e06eGaoSn81le5rZQNz0W",
+    "id": "1712302181941",
+    "avatar": "https://i.pravatar.cc/300"
+  },
+  {
+    "fullname": "Pratik",
+    "age": "35",
+    "email": "pratik@gmail.com",
+    "password": "$2a$10$Iunl1NODQcn6OIRVlEBiheWrb5Zuyr8yMEM6VCpK9hiHqzkkD02L6",
+    "id": "1712302849757",
+    "avatar": "https://i.pravatar.cc/300"
   }
 ]

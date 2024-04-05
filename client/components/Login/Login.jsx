@@ -3,9 +3,10 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { LoginValidator } from 'components/ValidationSchema';
-import '../Login/Login.scss';
 import { inputFieldLogin } from 'components/constants/InputFields';
 import InputControl from 'components/InputControl/InputControl';
+import USE_LOCAL_STORAGE from 'components/constants/USE_LOCAL_STORAGE';
+import '../Login/Login.scss';
 
 const Login = () => {
   const router = useRouter();
@@ -15,6 +16,7 @@ const Login = () => {
   });
 
   const [loginErrors, setLoginErrors] = useState({});
+  const [_, setStoredToken] = USE_LOCAL_STORAGE('token');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,15 +39,14 @@ const Login = () => {
           loginFormData
         );
 
-        setTimeout(() => {
-          const { token } = response.data;
-          localStorage.setItem('token', token);
+        const { token } = response.data;
+        setStoredToken(token);
 
-          console.log('Here Is Your Data', loginFormData);
+        setTimeout(() => {
           router.push('/pokemon');
         }, 2000);
       } catch (error) {
-        alert('Email Or Passwoed Not Match');
+        alert('Email Or Password Not Match');
         console.error('Data not Found', error);
       }
     }
