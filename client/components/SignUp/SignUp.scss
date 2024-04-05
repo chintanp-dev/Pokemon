@@ -1,0 +1,51 @@
+@import '../../styles/ColorVariants.scss';
+
+.signup_section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  width: 60.625%;
+  height: 800px;
+  background-color: $white-color;
+  padding: 70px 0px;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    width: 25rem;
+    height: fit-content;
+    gap: 50px;
+    padding: 30px 20px;
+
+    .signup_header {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .input_and_btn {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 20px;
+
+      .signup-button {
+        color: $white-color;
+        border: 0;
+        background-color: $Header-Color;
+        width: 360px;
+        height: 37px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+}

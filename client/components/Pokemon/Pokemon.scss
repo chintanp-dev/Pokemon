@@ -1,0 +1,29 @@
+@import '../../styles/ColorVariants.scss';
+
+header {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  background-color: $Header-Color;
+  padding: 10px 200px;
+  box-shadow: 0px 4px 4px 0px #00000026;
+
+  .logo_header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  p {
+    color: $white-color;
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
+
+.home_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem;
+}

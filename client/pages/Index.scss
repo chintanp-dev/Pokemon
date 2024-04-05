@@ -1,0 +1,32 @@
+@import '../styles/ColorVariants.scss';
+
+.header {
+  height: 250px;
+  background-color: $Header-Color;
+
+  .logo_header {
+    position: absolute;
+    top: 9%;
+    left: 20%;
+    display: flex;
+    gap: 1rem;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    p {
+      color: $white-color;
+      font-size: 30px;
+      font-weight: 700;
+    }
+  }
+}
+
+.signup__outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

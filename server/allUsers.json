@@ -1,0 +1,17 @@
+[
+  {
+    "fullname": "John",
+    "email": "john@test.com",
+    "password": "$2a$10$BxQbGOFrVoxYcU2l3QHyAeyM.X21YltO8EZ8LVmIGZCnPmpk1xd3y",
+    "id": "1710508568604",
+    "avatar": "https://i.pravatar.cc/300"
+  },
+  {
+    "fullname": "Chintan",
+    "age": "25",
+    "email": "chintan@gmail.com",
+    "password": "$2a$10$4E3BeHr/mG6QhQ704JjM1.gv1ihIElMJscJKa.1xrOorarM/0VoJe",
+    "id": "1712294456053",
+    "avatar": "https://i.pravatar.cc/300"
+  }
+]

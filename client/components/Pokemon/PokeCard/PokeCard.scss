@@ -1,0 +1,92 @@
+@import '../../../styles/ColorVariants.scss';
+
+.poke-card-outer {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 30px;
+
+  .poke-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1403px;
+    gap: 30px;
+
+    .pokebox {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .loadmore_btn {
+      cursor: pointer;
+      color: $white-color;
+      background-color: $Header-Color;
+      border: 0;
+      border-radius: 30px;
+      padding: 0.625rem 1.875rem;
+    }
+  }
+}
+
+.poke_card__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 20.5rem;
+  height: 21.5rem;
+  border-radius: 8px;
+  padding: 4px;
+  // background-color: $Grass-Color;
+
+  &__id {
+    text-align: end;
+    padding: 20px 20px 24px 20px;
+    color: $white-color;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 46.802%;
+    background-color: $white-color;
+    border-radius: 8px;
+    gap: 1rem;
+    padding: 56px 20px 20px 20px;
+
+    &__poke_name {
+      color: $Grass-Color;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    &--types {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+
+      &__type {
+        font-weight: 700;
+        color: $white-color;
+        border-radius: 10px;
+        padding: 2px 8px;
+      }
+    }
+  }
+
+  &__pokemon {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+  }
+}
